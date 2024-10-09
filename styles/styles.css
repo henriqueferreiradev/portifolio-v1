@@ -1,0 +1,179 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+
+:root {
+    --bg: #0D0D0D;
+    --rx1: #150140;
+    --rx2: #2E038C;
+    --rx3: #4804D9;
+    --rx4: #3A089B;
+    --brc: #ffffff;
+    --brc2: #f0f0f0;
+    --cza: #7E8182;
+    --cza-hover: #c2c3c3;
+    --var-font: 'Varela Round';
+    --mont-font: 'Montserrat';
+
+
+}
+
+body {
+    background-image: url(../assets/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: var(--bg);
+    color: var(--brc);
+    font-family: var(--var-font);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 10em;
+    padding: 1em;
+}
+
+.nav-list {
+    display: flex;
+
+}
+
+ 
+.sinal {
+    color: var(--rx2);
+
+}
+.logo-nome {
+    font-size: 20px;
+    color: var(--brc2);
+    letter-spacing: -.12em;
+    
+}
+.logo-nome:hover {
+    transition: 1s ease;  
+    scale: 1.1;
+}
+.logo-nome span:hover {
+    color: var(--rx1);  
+    transition: color 0.3s ease;  
+    cursor: pointer;
+    font-size: 20px;
+}
+ 
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.list-link {
+    position: relative;
+    color: var(--brc2);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 1em;
+}
+
+.list-link:hover {
+    color: var(--cza-hover);
+}
+
+.list-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--cza-hover);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+
+}
+
+.list-link:hover::after {
+    width: 100%;
+    left: 0;
+
+}
+.rodape {
+    display: flex;
+}
+.rodape-social-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.svg-color {
+    fill: var(--cza);
+    stroke-width: 0.3;
+    width: 20px;
+    height: 20px;
+}
+
+.svg-color:hover {
+    fill: var(--cza-hover);
+    stroke: var(--rx1);
+}
+
+.botao-topo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--rx2);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.svgIcon path {
+    fill: var(--brc);
+}
+
+.botao-topo:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: var(--rx2);
+    align-items: center;
+}
+
+.botao-topo:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.botao-topo::before {
+    position: absolute;
+    bottom: -20px;
+    content: 'Voltar ao topo';
+    font-family: var(--var-font);
+    color: var(--brc);
+    font-size: 0px;
+
+}
+.botao-topo:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s ;
+}
+ 
+
+.svgIcon {
+    width: 15px;
+}
