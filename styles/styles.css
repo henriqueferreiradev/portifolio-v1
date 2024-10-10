@@ -3,10 +3,10 @@
 
 
 :root {
-    --bg: #0D0D0D;
-    --rx1: #150140;
-    --rx2: #2E038C;
-    --rx3: #4804D9;
+    --bg: #1e2328;
+    --am-forte: #EB9D02;
+    --am-medio: #f5b301;
+    --am-hover: #fed053;
     --rx4: #3A089B;
     --brc: #ffffff;
     --brc2: #f0f0f0;
@@ -19,10 +19,6 @@
 }
 
 body {
-    background-image: url(../assets/bg2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
     background-color: var(--bg);
     color: var(--brc);
     font-family: var(--var-font);
@@ -43,11 +39,12 @@ body {
 
  
 .sinal {
-    color: var(--rx2);
+    color: var(--am-medio);
 
 }
 .logo-nome {
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: 700;
     color: var(--brc2);
     letter-spacing: -.12em;
     
@@ -57,21 +54,13 @@ body {
     scale: 1.1;
 }
 .logo-nome span:hover {
-    color: var(--rx1);  
+    color: var(--amarelo);  
     transition: color 0.3s ease;  
     cursor: pointer;
-    font-size: 20px;
+    font-size: 28px;
 }
  
-.mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: -1;
-}
+ 
 
 .list-link {
     position: relative;
@@ -102,32 +91,49 @@ body {
     left: 0;
 
 }
+.sobremim-atividade {
+    background: -moz-linear-gradient(288deg, rgba(245,179,1,1) 1%, rgba(235,157,2,1) 7%, rgba(255,132,0,1) 19%, rgba(250,139,1,1) 34%, rgba(253,148,11,1) 47%, rgba(253,148,11,1) 60%, rgba(250,169,25,1) 75%, rgba(245,199,45,1) 81%, rgba(245,199,45,1) 95%);
+    background: -webkit-linear-gradient(288deg, rgba(245,179,1,1) 1%, rgba(235,157,2,1) 7%, rgba(255,132,0,1) 19%, rgba(250,139,1,1) 34%, rgba(253,148,11,1) 47%, rgba(253,148,11,1) 60%, rgba(250,169,25,1) 75%, rgba(245,199,45,1) 81%, rgba(245,199,45,1) 95%);
+    background: linear-gradient(288deg, rgba(245,179,1,1) 1%, rgba(235,157,2,1) 7%, rgba(255,132,0,1) 19%, rgba(250,139,1,1) 34%, rgba(253,148,11,1) 47%, rgba(253,148,11,1) 60%, rgba(250,169,25,1) 75%, rgba(245,199,45,1) 81%, rgba(245,199,45,1) 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em; 
+    font-weight: bold;
+}
+
+
 .rodape {
     display: flex;
 }
-.rodape-social-lista {
+.social-lista {
     display: flex;
     flex-direction: column;
 }
 
 
 .svg-color {
-    fill: var(--cza);
+    fill: var(--cza-hover);
     stroke-width: 0.3;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 0.3em;
 }
 
 .svg-color:hover {
-    fill: var(--cza-hover);
-    stroke: var(--rx1);
+    fill: var(--am-medio);
+    stroke: var(--amarelo);
+    transition: 0.3s ease-in;
+
+    scale: 1.3;
 }
+
+ 
 
 .botao-topo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--rx2);
+    background-color: var(--am-medio);
     border: none;
     font-weight: 600;
     display: flex;
@@ -148,7 +154,7 @@ body {
     width: 140px;
     border-radius: 50px;
     transition-duration: 0.3s;
-    background-color: var(--rx2);
+    background-color: var(--am-medio);
     align-items: center;
 }
 
